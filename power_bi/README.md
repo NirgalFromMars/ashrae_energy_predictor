@@ -60,7 +60,7 @@ Some highlights of the report:
 
 | Index | Main Analysis | Evaluation Results |
 |-------|---------------|--------------------|
-| ![Index](../images/index_power_bi.png) | ![Main Analysis](images/main_analysis_power_bi.png) | ![Evaluation](images/evaluation_results_power_bi.png) |
+| ![Index](../images/index_power_bi.png) | ![Main Analysis](../images/main_analysis_power_bi.png) | ![Evaluation](../images/evaluation_results_power_bi.png) |
 
 ## Notes
 - The report is also published in Power BI Service.  
