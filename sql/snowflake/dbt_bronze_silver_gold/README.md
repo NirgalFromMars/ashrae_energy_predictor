@@ -33,7 +33,6 @@ The project includes a set of **33 tests**, covering:
 
 Tests were defined directly in the `schema.yml` files and executed using:
 
-```bash
 dbt test
 
 📘 Documentation
