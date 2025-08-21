@@ -56,11 +56,17 @@ This project integrates several modern technologies for data engineering, machin
 
 ## 📂 Repository Structure
 ashrae_energy_predictor/
+
 │── README.md # Project overview
+
 │── python/ # Local notebooks and scripts
+
 │── sql/ # SQL scripts (dbt, Snowflake, BigQuery ML)
+
 │── power_bi/ # Power BI report & dashboard captures
-│── results/ # Model metrics and comparison images
+
+│── images/ # Significant screenshots
+
 └── docs/ # Extended documentation
 
 ---
