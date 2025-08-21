@@ -32,12 +32,14 @@ This project integrates several modern technologies for data engineering, machin
 
 5. **📊 Visualization in Power BI**
    - Direct connection to BigQuery tables.
-   - Interactive dashboard including:
+   - Interactive report including:
      - Hourly and daily consumption trends.
      - Weekend vs weekday comparisons.
      - Hierarchical drilldown: **site → building → meter**.
      - Statistical insights (percentiles, z-scores).
-   - Final dashboard with ML evaluation metrics.
+   - Final visualization with ML evaluation metrics.
+   - Index:
+     ![Index](results/index_power_bi.png)
 
 6. **💻 Local Modeling with Python (scikit-learn)**
    - Extraction of 1 million rows from BigQuery.
