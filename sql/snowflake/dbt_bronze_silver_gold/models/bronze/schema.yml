@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: raw
+    project: ashrae-bq-project  # para Snowflake -> database: ASHRAE_DB
+    dataset: ashrae_dataset  # para Snowflake -> schema: PUBLIC
+    tables:
+      - name: train
+      - name: building_metadata
+      - name: weather_train
+      - name: weather_test
+      - name: test

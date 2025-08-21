@@ -1,0 +1,127 @@
+version: 2
+
+models:
+  - name: gold_train_summary_by_building
+    description: "Aggregated metrics per building from the silver_train dataset, used for analysis and visualization."
+    columns:
+      - name: building_id
+        description: "Unique identifier for the building."
+        tests:
+          - not_null
+          - unique
+      - name: num_records
+        description: "Number of records (timestamps) available for the building."
+      - name: avg_meter_reading
+        description: "Average energy consumption for the building."
+      - name: max_meter_reading
+        description: "Maximum recorded energy consumption."
+      - name: min_meter_reading
+        description: "Minimum recorded energy consumption."
+      - name: stddev_meter_reading
+        description: "Standard deviation of energy consumption."
+      - name: primary_use
+        description: "Primary use category of the building."
+      - name: square_feet
+        description: "Building size in square feet."
+      - name: year_built
+        description: "Year the building was constructed."
+      - name: floor_count
+        description: "Number of floors in the building."
+  - name: gold_train_hourly_avg
+    description: "Average meter reading per site, primary use, meter type, and hour of day."
+    columns:
+      - name: site_id
+        description: "Identifier of the site where the building is located."
+      - name: primary_use
+        description: "Primary usage category of the building."
+      - name: meter
+        description: "Type of energy meter used."
+        tests:
+          - not_null
+      - name: hour
+        description: "Hour of the day (0–23) extracted from the timestamp."
+        tests:
+          - not_null
+      - name: avg_meter_reading
+        description: "Average energy consumption for that hour, site, and use type."
+        tests:
+          - not_null
+  - name: gold_train_for_ml
+    description: "Clean training dataset from silver layer, ready for use in machine learning models."
+    columns:
+      - name: building_id
+        description: "ID of the building."
+        tests:
+          - not_null
+      - name: meter
+        description: "Type of energy meter used."
+        tests:
+          - not_null
+      - name: site_id
+        description: "ID of the site where the building is located."
+        tests:
+          - not_null
+      - name: primary_use
+        description: "Category describing the primary use of the building."
+        tests:
+          - not_null
+      - name: square_feet
+        description: "Size of the building in square feet."
+        tests:
+          - not_null
+      - name: year_built
+        description: "Year the building was constructed."
+        tests:
+          - not_null
+      - name: floor_count
+        description: "Number of floors in the building."
+        tests:
+          - not_null
+      - name: air_temperature
+        description: "Air temperature in Celsius."
+        tests:
+          - not_null
+      - name: cloud_coverage
+        description: "Fraction of sky covered by clouds."
+        tests:
+          - not_null
+      - name: dew_temperature
+        description: "Dew point temperature."
+        tests:
+          - not_null
+      - name: sea_level_pressure
+        description: "Sea level pressure in millibars."
+        tests:
+          - not_null
+      - name: wind_direction
+        description: "Wind direction in degrees."
+        tests:
+          - not_null
+      - name: wind_speed
+        description: "Wind speed in meters per second."
+        tests:
+          - not_null
+      - name: hour
+        description: "Hour of the day (0–23)."
+        tests:
+          - not_null
+      - name: day
+        description: "Day of the month."
+        tests:
+          - not_null
+      - name: month
+        description: "Month number."
+        tests:
+          - not_null
+      - name: day_of_week
+        description: "Day of the week (0=Sunday, 6=Saturday)."
+        tests:
+          - not_null
+      - name: is_weekend
+        description: "1 if the day is Saturday or Sunday, else 0."
+        tests:
+          - not_null
+      - name: meter_reading
+        description: "Target variable: energy consumption reading."
+        tests:
+          - not_null

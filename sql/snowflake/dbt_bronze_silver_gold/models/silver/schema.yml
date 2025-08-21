@@ -1,0 +1,112 @@
+version: 2
+
+models:
+  - name: silver_train
+    description: "Training dataset enriched with building metadata and weather information"
+    columns:
+      - name: building_id
+        description: "ID of the building"
+        tests:
+          - not_null
+      - name: meter
+        description: "Type of meter (0: electricity, etc.)"
+        tests:
+          - not_null
+          - accepted_values:
+              values: [0, 1, 2, 3]
+      - name: timestamp
+        description: "Timestamp of the measurement"
+        tests:
+          - not_null
+      - name: hour
+        description: Hour of the day (0-23) extracted from the timestamp.
+      - name: day
+        description: Day of the month (1-31) extracted from the timestamp.
+      - name: day_of_week
+        description: Day of the week extracted from the timestamp (0 = Sunday, 6 = Saturday).
+      - name: month
+        description: Month number extracted from the timestamp (1-12).
+      - name: is_weekend
+        description: Boolean flag indicating whether the timestamp falls on a weekend (true if Saturday or Sunday).
+      - name: meter_reading
+        description: "Meter reading value"
+        tests:
+          - not_null
+      - name: site_id
+        description: "Site ID associated with the building"
+      - name: primary_use
+        description: "Primary usage type of the building"
+      - name: square_feet
+        description: "Total area of the building in square feet"
+      - name: year_built
+        description: "Year when the building was constructed"
+      - name: floor_count
+        description: "Number of floors in the building"
+      - name: air_temperature
+        description: "Air temperature in degrees Celsius"
+      - name: cloud_coverage
+        description: "Amount of cloud coverage"
+      - name: dew_temperature
+        description: "Dew point temperature"
+      - name: precip_depth_1_hr
+        description: "Precipitation depth in the past hour (mm)"
+      - name: sea_level_pressure
+        description: "Atmospheric pressure at sea level"
+      - name: wind_direction
+        description: "Wind direction in degrees"
+      - name: wind_speed
+        description: "Wind speed in meters per second"
+        
+  - name: silver_test
+    description: "Test dataset enriched with building metadata and weather information"
+    columns:
+      - name: row_id
+        description: "Unique identifier for each row"
+      - name: building_id
+        description: "ID of the building"
+        tests:
+          - not_null
+      - name: meter
+        description: "Type of meter (0: electricity, etc.)"
+        tests:
+          - not_null
+          - accepted_values:
+              values: [0, 1, 2, 3]
+      - name: timestamp
+        description: "Timestamp of the measurement"
+        tests:
+          - not_null
+      - name: hour
+        description: Hour of the day (0-23) extracted from the timestamp.
+      - name: day
+        description: Day of the month (1-31) extracted from the timestamp.
+      - name: day_of_week
+        description: Day of the week extracted from the timestamp (0 = Sunday, 6 = Saturday).
+      - name: month
+        description: Month number extracted from the timestamp (1-12).
+      - name: is_weekend
+        description: Boolean flag indicating whether the timestamp falls on a weekend (true if Saturday or Sunday).
+      - name: site_id
+        description: "Site ID associated with the building"
+      - name: primary_use
+        description: "Primary usage type of the building"
+      - name: square_feet
+        description: "Total area of the building in square feet"
+      - name: year_built
+        description: "Year when the building was constructed"
+      - name: floor_count
+        description: "Number of floors in the building"
+      - name: air_temperature
+        description: "Air temperature in degrees Celsius"
+      - name: cloud_coverage
+        description: "Amount of cloud coverage"
+      - name: dew_temperature
+        description: "Dew point temperature"
+      - name: precip_depth_1_hr
+        description: "Precipitation depth in the past hour (mm)"
+      - name: sea_level_pressure
+        description: "Atmospheric pressure at sea level"
+      - name: wind_direction
+        description: "Wind direction in degrees"
+      - name: wind_speed
+        description: "Wind speed in meters per second"
