@@ -1,5 +1,17 @@
 # Power BI Report: ASHRAE Energy Predictor
 
+The Power BI report is provided in two versions:
+
+- **ASHRAE_Energy_Predictor_sample.pbix**  
+  This is a reduced version of the original file, containing only 100,000 rows from the `silver_train` dataset (~0.5% of the total 20M rows).  
+  ⚠️ The goal of this sample is to allow users to open and explore the dashboard in Power BI Desktop without exceeding GitHub's file size limits.  
+  Please note that results and figures may differ from the full dataset.
+
+- **Full version (published in Power BI Service)**  
+  The complete report, based on the full dataset (20M rows), is published online and can be accessed via the following public link:  
+  👉 [View the full interactive report on Power BI Service](https://app.powerbi.com/view?r=eyJrIjoiZDU3MDMzZTEtNDJmYy00NTBkLWIxNGMtMWZiNjBkNmU2NzhkIiwidCI6ImJlNDY1NWRmLWFjNzMtNDAxZi1hN2FlLTE5OGMzYjcyZDBjNiIsImMiOjh9)
+
+
 This folder contains the Power BI report developed as the final visualization layer of the project.
 
 ## File
@@ -48,7 +60,7 @@ Some highlights of the report:
 
 | Index | Main Analysis | Evaluation Results |
 |-------|---------------|--------------------|
-| ![Index](images/index_power_bi.png) | ![Main Analysis](images/main_analysis_power_bi.png) | ![Evaluation](images/evaluation_results_power_bi.png) |
+| ![Index](../images/index_power_bi.png) | ![Main Analysis](images/main_analysis_power_bi.png) | ![Evaluation](images/evaluation_results_power_bi.png) |
 
 ## Notes
 - The report is also published in Power BI Service.  
